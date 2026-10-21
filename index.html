@@ -47,7 +47,7 @@
       margin-bottom: 40px;
     }
 
-    /* 名字与下划线 */
+    /* 名字（无下划线） */
     .title-wrapper {
       display: inline-block;
       margin-bottom: 18px;
@@ -63,14 +63,14 @@
       padding-bottom: 4px;
     }
 
-   /* 顶部导航栏 */
+    /* 顶部导航栏 */
     nav {
       display: flex;
       gap: 32px;
     }
 
     nav a {
-      text-decoration: none; /* 平时没有下划线 */
+      text-decoration: none; /* 平时无下划线 */
       color: var(--text-muted);
       font-size: 0.95rem;
       text-transform: uppercase;
@@ -86,10 +86,9 @@
       text-underline-offset: 4px;
     }
 
-    /* 当前选中的页面（如果你希望当前页面保持无下划线或有下划线，可以自由调整，这里设置为有下划线或无下划线均可） */
     nav a.active {
       color: var(--link-hover);
-      text-decoration: none; /* 如果当前页面不需要下划线设为 none，如果需要可以改为 underline */
+      text-decoration: none;
     }
 
     /* ABOUT / 个人简介 */
@@ -135,7 +134,7 @@
       line-height: 1.65;
     }
 
-    /* 社交链接 (精简后) */
+    /* 社交链接 */
     .social-links {
       display: flex;
       flex-wrap: wrap;
@@ -174,14 +173,25 @@
       color: var(--text-main);
     }
 
+    .sub-section-title {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 0.95rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      margin: 20px 0 10px 0;
+      color: var(--text-main);
+    }
+
     .item-list {
       display: flex;
       flex-direction: column;
-      gap: 18px;
+      gap: 14px;
     }
 
     .item-row {
       line-height: 1.6;
+      font-size: 0.98rem;
     }
 
     .item-bold {
@@ -189,13 +199,16 @@
       color: var(--text-main);
     }
 
-    .item-desc {
+    .item-note {
+      font-style: italic;
       color: var(--text-muted);
+      font-size: 0.9rem;
+      margin-top: 2px;
     }
 
     .news-date {
       font-weight: 600;
-      min-width: 100px;
+      min-width: 90px;
       display: inline-block;
       color: var(--text-main);
     }
@@ -219,6 +232,10 @@
       }
       nav {
         gap: 20px;
+      }
+      .news-date {
+        display: block;
+        margin-bottom: 2px;
       }
     }
   </style>
@@ -244,18 +261,16 @@
       
       <!-- ABOUT SECTION -->
       <section id="about" class="profile-section">
-        <!-- 你的素描人像照片 -->
         <img src="Portrait_Yikang_Yu.png" alt="Yikang Yu Portrait" class="profile-avatar">
         
         <div class="profile-content">
           <h2 class="profile-name">Yikang Yu</h2>
-          <p class="profile-affiliation">Research Scientist · Materials Science & Energy Storage</p>
+          <p class="profile-affiliation">Postdoctoral Researcher · Zhejiang University</p>
           
           <p class="profile-bio">
-            I am a Research Scientist specializing in materials science, battery electrochemistry, and energy storage technologies. My work focuses on graphite anode-electrolyte compatibility, solvation structure engineering, and wide-temperature lithium-ion battery performance.
+            I am a Postdoctoral Researcher at the College of Chemical & Biological Engineering, Zhejiang University. My research specializes in materials science, battery electrochemistry, and energy storage technologies, with a focus on graphite anode-electrolyte compatibility, solvation structure engineering, and wide-temperature lithium-ion battery performance.
           </p>
 
-          <!-- 精简后的链接：Email, LinkedIn, Scholar -->
           <div class="social-links">
             <a href="mailto:your.email@example.com">Email</a>
             <a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
@@ -269,10 +284,7 @@
         <h3 class="section-title">WORK EXPERIENCE</h3>
         <div class="item-list">
           <div class="item-row">
-            <span class="item-bold">Research Scientist</span> · Materials & Energy Storage Laboratory (2024 – Present)
-          </div>
-          <div class="item-row">
-            <span class="item-bold">Postdoctoral Researcher</span> · Electrochemical Energy Research Center (2024)
+            <span class="item-bold">Postdoctoral Researcher</span> · Zhejiang University, College of Chemical & Biological Engineering (2025 – Present)
           </div>
         </div>
       </section>
@@ -282,7 +294,10 @@
         <h3 class="section-title">EDUCATION</h3>
         <div class="item-list">
           <div class="item-row">
-            <span class="item-bold">Purdue University West Lafayette</span> · Ph.D. in Materials Engineering (2024)
+            <span class="item-bold">Purdue University West Lafayette</span> · Ph.D. in Mechanical Engineering (2024)
+          </div>
+          <div class="item-row">
+            <span class="item-bold">Purdue University West Lafayette</span> · M.S. in Mechanical Engineering (2021)
           </div>
           <div class="item-row">
             <span class="item-bold">Harbin Institute of Technology</span> · B.S. in Materials Science (2016)
@@ -295,21 +310,219 @@
         <h3 class="section-title">NEWS</h3>
         <div class="item-list">
           <div class="item-row">
-            <span class="news-date">[2026.08]</span> Published a new paper on wide-temperature battery electrolytes.
+            <span class="news-date">[2026.08]</span> Dr. Yu received grant support (300,000 CNY) from the <strong>National Natural Science Foundation of China (NSFC)</strong>.
           </div>
           <div class="item-row">
-            <span class="news-date">[2024.05]</span> Successfully defended Ph.D. dissertation at Purdue University.
+            <span class="news-date">[2026.07]</span> Dr. Yu was awarded a General Program grant (80,000 CNY) from the <strong>Office of China Postdoc Council (OCPC)</strong>.
+          </div>
+          <div class="item-row">
+            <span class="news-date">[2026.03]</span> Yikang's valuable contributions to <em>Journal of Physics: Energy</em> were recognized with the <strong>Outstanding Reviewer Award 2025</strong> by IOP Publishing.
+          </div>
+          <div class="item-row">
+            <span class="news-date">[2025.07]</span> Dr. Yu was awarded the <strong>Postdoctoral Fellowship</strong> by the Office of China Postdoc Council (OCPC).
+          </div>
+          <div class="item-row">
+            <span class="news-date">[2025.06]</span> Recognized for excellent Ph.D. achievements at Purdue, Yikang received the <strong>Chinese Government Award for Outstanding Self-financed Students Abroad (Category B)</strong> from the China Scholarship Council (CSC).
+          </div>
+          <div class="item-row">
+            <span class="news-date">[2025.02]</span> Dr. Yu started his Postdoc position at the College of Chemical & Biological Engineering, <strong>Zhejiang University</strong>, working with Prof. Liguang Wang on advanced graphite anodes.
+          </div>
+          <div class="item-row">
+            <span class="news-date">[2024.11]</span> Yikang successfully passed his <strong>Ph.D. Final Exam</strong> at Purdue University!
+          </div>
+          <div class="item-row">
+            <span class="news-date">[2024.09]</span> Manuscript titled <em>"Stabilizing Graphite Anode in Electrolyte with Nanoscale Anion Network for High-Rate Lithium Storage"</em> was accepted for publication in <strong>ACS Energy Letters</strong>.
+          </div>
+          <div class="item-row">
+            <span class="news-date">[2024.03]</span> Awarded as an <strong>IOP Trusted Reviewer</strong> for consistently valuable peer reviews for the Institute of Physics.
+          </div>
+          <div class="item-row">
+            <span class="news-date">[2023.11]</span> Paper titled <em>"Kinetic pathways of fast lithium transport in solid electrolyte interphases with discrete inorganic components"</em> was accepted in <strong>Energy & Environmental Science</strong> and highlighted in <em>Rare Metals</em>.
+          </div>
+          <div class="item-row">
+            <span class="news-date">[2023.05]</span> Attended the <strong>243rd ECS Meeting</strong> in Boston and gave two oral presentations on cryo-TEM characterization and FeOF cathode materials.
+          </div>
+          <div class="item-row">
+            <span class="news-date">[2023.02]</span> Presented a poster at the 1st MochA Symposium organized by the Purdue ECS Student Chapter and Purdue ME School.
+          </div>
+          <div class="item-row">
+            <span class="news-date">[2022.12]</span> Completed all Ph.D. coursework (12 courses) with an outstanding GPA of <strong>3.93 / 4.00</strong>.
+          </div>
+          <div class="item-row">
+            <span class="news-date">[2022.05]</span> Invited to serve as Review Editor for the Electrochemistry section of <strong>Frontiers in Chemistry</strong>.
+          </div>
+          <div class="item-row">
+            <span class="news-date">[2022.05]</span> Manuscript on pre-formed SEI in flow cells accepted for publication in <strong>Carbon</strong>.
+          </div>
+          <div class="item-row">
+            <span class="news-date">[2021.12]</span> Awarded the <strong>Master of Science in Mechanical Engineering (MSME)</strong> degree "along the way" from Purdue University (GPA = 3.90 / 4.00).
+          </div>
+          <div class="item-row">
+            <span class="news-date">[2021.09]</span> Selected as 1 of 15 finalist teams in the <strong>Moonshot Pitch Competition</strong> at Purdue University.
+          </div>
+          <div class="item-row">
+            <span class="news-date">[2021.06]</span> Attended the 13th annual Beyond Lithium-Ion Symposium hosted by Argonne National Laboratory (ANL).
+          </div>
+          <div class="item-row">
+            <span class="news-date">[2021.05]</span> Accepted to the 2021 APS/IIT XAFS Summer School hosted by Argonne National Laboratory and Illinois Institute of Technology.
+          </div>
+          <div class="item-row">
+            <span class="news-date">[2020.12]</span> Comprehensive review paper on Li metal anodes accepted for publication in <strong>ACS Applied Materials & Interfaces</strong>.
+          </div>
+          <div class="item-row">
+            <span class="news-date">[2020.08]</span> Ph.D. Plan of Study approved by Purdue Graduate School Advisory Committee.
+          </div>
+          <div class="item-row">
+            <span class="news-date">[2020.05]</span> Collaborative paper on gradient porous graphene aerogels accepted in <strong>Energy Storage Materials</strong>.
+          </div>
+          <div class="item-row">
+            <span class="news-date">[2020.04]</span> Passed all Area Exams and officially became a <strong>Ph.D. Candidate</strong> at Purdue Mechanical Engineering.
+          </div>
+          <div class="item-row">
+            <span class="news-date">[2019.08]</span> Started Ph.D. studies at the School of Mechanical Engineering, <strong>Purdue University</strong>.
           </div>
         </div>
       </section>
 
-      <!-- PUBLICATIONS / SELECTED RESEARCH SECTION -->
+      <!-- PUBLICATIONS SECTION -->
       <section id="publications" class="section-block">
-        <h3 class="section-title">SELECTED RESEARCH & PUBLICATIONS</h3>
-        <div class="item-list">
+        <h3 class="section-title">PUBLICATIONS</h3>
+
+        <!-- Book & Review -->
+        <h4 class="sub-section-title">Book & Review</h4>
+        <div class="item-list" style="margin-bottom: 24px;">
           <div class="item-row">
-            <p><span class="item-bold">Solvation Structure Engineering for Graphite Anodes in Wide-Temperature Lithium-Ion Batteries.</span></p>
-            <p class="item-desc"><span class="item-bold">Yikang Yu</span>, et al. Journal of Electrochemical Science (2026).</p>
+            [1] Ayrat M. Dmiev, Siegfied Eigler. <em>Graphene Oxide: Fundamentals and Applications</em>, John Wiley & Sons, 2016. (Translated in Chinese by Qiangqiang Zhang, Pingge He, <strong>Yikang Yu</strong>, and Kaichun Yang. China Machine Press, 2018.)
+          </div>
+          <div class="item-row">
+            [2] <strong>Y. Yu</strong>, Y. Liu, J. Xie*. Building Better Li Metal Anode in Liquid Electrolyte: Challenges and Progress. <em>ACS Applied Materials & Interfaces</em>, 2021, 13, 18-33.
+          </div>
+          <div class="item-row">
+            [3] W. Huang, Y. Zhu, Y. Ma, H. Huo, P. Zuo, C. Du, G. Yin, <strong>Y. Yu</strong>, S. Li, W. Chen, L. Wang*, C. Fu*. Pre-lithiation and Continuous Lithium Compensation Technologies for Advanced Lithium-ion Batteries, <em>EcoEnergy</em>, 2025, e70016.
+          </div>
+        </div>
+
+        <!-- Research Articles -->
+        <h4 class="sub-section-title">Research Articles</h4>
+        
+        <div class="item-list">
+          <!-- 2026 -->
+          <div class="item-row"><strong>2026</strong></div>
+          <div class="item-row">
+            [29] <strong>Y. Yu</strong>, J. Zhang, R. Zhu, W. Yu, X. Wang, L. Wang, Spatial Mapping of Solid Electrolyte Interphase via Synchrotron Infrared Microspectroscopy. <em>Photon Science</em>, 2026.
+          </div>
+          <div class="item-row">
+            [28] S. Qian, <strong>Y. Yu</strong>, M. Zhao, M. Li, L. Yu, Y. Wang, M. Zheng, J. Lu. Decoding a Galvanic Corrosion-Driven Lithium Stripping Mechanism in Lithum-Free anode Systems. <em>ACS Energy Lett.</em>, 2026, 11 (9), 6102-6108.
+          </div>
+          <div class="item-row">
+            [27] G. Zhu, Y. Liu, <strong>Y. Yu</strong>, M. Behzadnia, Q. Zhang, C. Sun, Y. Liu, Y.-K. Lien, W. Lu, M. Agarwal, J. Xie. Si-doped vanadium pentoxide/graphene xerogel nanocomposite cathodes with exellent cycle life for Li-ion batteries. <em>J. Mater. Chem. A.</em>, 2026.
+          </div>
+
+          <!-- 2024 -->
+          <div class="item-row" style="margin-top: 10px;"><strong>2024</strong></div>
+          <div class="item-row">
+            [26] <strong>Y. Yu</strong>, G. Zhu, Q. Zhang, M. Behzadnia, Z. Yang, Y. Liu, J. Xie. Multinonmetal-Doped V2O5 Nanocomposites for Lithium-Ion Battery Cathodes. <em>ACS Applied Energy Materials</em>, 2024, 7, 23, 11031-11037.
+          </div>
+          <div class="item-row">
+            [25] <strong>Y. Yu</strong>, J. Xu, K. Duanmu, V. Shutthanandan, S. Wi, Z. Yang, Y. Liu, X. Lyu, K. Qian, M. Agarwal, Z. Zhang, Y. Zhang, T. Li, C. Liu, V. Murugesan, J. Xie. Stabilizing graphite anode in electrolytes with nanoscale anion networking for high-rate lithium storage. <em>ACS Energy Letters</em>, 2024, 10, 9, 5002-5011.
+          </div>
+
+          <!-- 2023 -->
+          <div class="item-row" style="margin-top: 10px;"><strong>2023</strong></div>
+          <div class="item-row">
+            [24] <strong>Y. Yu</strong>, M. Levine, Z. Yang, S. Jeon, E. Stach, J. Xie. Boosting the Low-Temperature Performance of Graphite Anodes by Creating an Electrochemically Active Interface. <em>ACS Applied Energy Materials</em>, 2023, 6, 24, 12371-12378.
+          </div>
+          <div class="item-row">
+            [23] <strong>Y. Yu#</strong>, H. Koh#, Z. Zhang#, Z. Yang, A. N. Alexandrova, M. Agarwal, E. A. Stach, J. Xie. Kinetic pathways of fast lithium transport in solid electrolyte interphases with discrete inorganic components. <em>Energy & Environmental Science</em>, 2023, 6, 5904-5915. (# Co-first authors)
+            <div class="item-note">This work was highlighted in Rare Metals as "One-Step Pore diffusion mechanism of Li+ in solid electrolyte interphase for fast-charging lithium-ion battery."</div>
+          </div>
+          <div class="item-row">
+            [22] Q. An, W. Xiong, F. Hu, <strong>Y. Yu</strong>, P. Lv, S. Hu, X. Gan, X. He, J. Zhao, S. Yuan. Direct growth of single-chiral-angle tungsten disulfide nanotubes using gold nanoparticle catalysts. <em>Nature Materials</em>, 2023, 23, 347-355.
+          </div>
+          <div class="item-row">
+            [21] Q. Gong, H. Zhang, H. Yu, S. Jeon, Y. Ren, Z. Yang, C.-J. Sun, E. A. Stach, A. C. Foucher, <strong>Y. Yu</strong>, M. Smart, G. M. Filippelli, D. A. Cullen, P. Liu, J. Xie. Amino-tethering synthesis strategy toward highly accessible sub-3-nm L10-PtM catalysts for high-power fuel cells. <em>Matter</em>, 2023, 6, 963-982.
+          </div>
+          <div class="item-row">
+            [20] Y. Liu, <strong>Y. Yu</strong>, F. Yang, G. Zhu, K. Yu, R. Kou, C. Sun, Y. Liu, J. Xu, C. Liu, C. Li, T. Liu, Y. Ren, W. Lu, R. Ferreira, P. Ferreira, Z. Zhang, J. Xie. Reversible Iron Oxyfluoride (FeOF)-Graphene Composites as Sustainable Cathodes for High Energy Density Lithium Batteries. <em>Small</em>, 2023, 2206947.
+          </div>
+
+          <!-- 2022 -->
+          <div class="item-row" style="margin-top: 10px;"><strong>2022</strong></div>
+          <div class="item-row">
+            [19] <strong>Y. Yu</strong>, Z. Yang, Y. Liu, J. Xie. Achieving SEI Preformed Graphite in Flow Cell to Mitigate Initial Lithium Loss. <em>Carbon</em>, 2022, 196, 589-595.
+          </div>
+          <div class="item-row">
+            [18] T. Liu, Y. Liu, <strong>Y. Yu</strong>, Y. Ren, C. Sun, Y. Liu, J. Xu, C. Liu, Z. Yang, W. Lu, P. Ferreira, Z. Chao, J. Xie. Approaching Theoretical Specific Capacity of Iron-Rich Lithium Iron Silicate Using Graphene-incorporation and Fluoride-doping. <em>Journal of Materials Chemistry A</em>, 2022, 10, 4006-4014.
+            <div class="item-note">(Marked as HOT Paper, as recommended by referees)</div>
+          </div>
+
+          <!-- 2020 -->
+          <div class="item-row" style="margin-top: 10px;"><strong>2020</strong></div>
+          <div class="item-row">
+            [17] C. Li, Y. Liu, L. Xin, <strong>Y. Yu</strong>, Q. Gong, F. Yang, J. Xie. Surface Proton Conduction over Catalyst Support via Chemically Grafted Groups. <em>Journal of The Electrochemical Society</em>, 2020, 167, 164509.
+          </div>
+          <div class="item-row">
+            [16] W. Huang#, <strong>Y. Yu#</strong>, Z. Hou, Z. Liang, Y. Zheng, Z. Quan, Y.-C. Lu. Dendrite-Free Lithium Electrode Enabled by Graphene Aerogels with Gradient Porosity. <em>Energy Storage Materials</em>, 2020, 33, 329-335. (# Co-first authors)
+          </div>
+          <div class="item-row">
+            [15] Z. Hou, W. Wang, <strong>Y. Yu</strong>, X. Zhao, Q. Chen, L. Zhao, Q. Di, H. Ju, Z. Quan. Poly(vinylidene difluoride) Coating on Cu Current Collector for High-Performance Na Metal Anode. <em>Energy Storage Materials</em>, 2020, 24, 588-593.
+          </div>
+
+          <!-- 2019 -->
+          <div class="item-row" style="margin-top: 10px;"><strong>2019</strong></div>
+          <div class="item-row">
+            [14] Z. Hou, W. Wang, Q. Chen, <strong>Y. Yu</strong>, X. Zhao, M. Tang, Y. Zhen, Z. Quan. Hybrid Protective Layer for Stable Sodium Metal Anode at High Utilization. <em>ACS Applied Materials & Interfaces</em>, 2019, 11, 37693-37700.
+          </div>
+          <div class="item-row">
+            [13] <strong>Y. Yu</strong>, Z. Wang, Z. Hou, W. Ta, W. Wang, X. Zhao, Q. Li, Y. Zhao, Q. Zhang, Z. Quan. 3D Printing of Hierarchical Graphene Lattice for Advanced Na Metal Anode. <em>ACS Applied Energy Materials</em>, 2019, 2, 3869-3877.
+          </div>
+          <div class="item-row">
+            [12] X. Zhao, W. Wang, Z. Hou, G. Wei, <strong>Y. Yu</strong>, J. Zhang, Z. Quan. SnP0.94 nanoplates/graphene oxide composite for novel potassium ion battery anode. <em>Chemical Engineering Journal</em>, 2019, 370, 677-683.
+          </div>
+          <div class="item-row">
+            [11] Z. Hou#, <strong>Y. Yu#</strong>, W. Wang#, X. Zhao, Q. Di, Q. Chen, Y. Liu, Z. Quan. Lithiophilic Ag Nanopartcle Layer on Cu Current Collector towards Stable Li Metal Anode. <em>ACS Applied Materials & Interfaces</em>, 2019, 11, 8148-8154. (# Co-first authors)
+          </div>
+          <div class="item-row">
+            [10] X. Zhao, W. Wang, Z. Hou, X. Fan, G. Wei, <strong>Y. Yu</strong>, Q. Di, Y. Liu, Z. Quan, J. Zhang. Yolk-shell structured SnSe as a high-performance anode for Na-ion batteries. <em>Inorganic Chemistry Frontiers</em>, 2019, 6, 562-565.
+          </div>
+          <div class="item-row">
+            [9] X. Zhao, W. Wang, Z. Hou, <strong>Y. Yu</strong>, Q. Di, X. Wu, G. Wei, Z. Quan, J. Zhang. Monodisperse Tin Nanoparticles and Hollow Tin Oxide Nanospheres as Anode Materials for High Performance Lithium Ion Batteries. <em>Inorganic Chemistry Frontiers</em>, 2019, 6, 473-476.
+          </div>
+          <div class="item-row">
+            [8] <strong>Y. Yu</strong>, W. Huang, X. Song, W. Wang, Z. Hou, X. Zhao, K. Deng, H. Ju, Y. Sun, Y. Zhao, Y.-C. Lu, Z. Quan. Thermally reduced graphene paper with fast Li ion diffusion for stable Li metal anode. <em>Electrochimica Acta</em>, 2019, 294, 413-422.
+          </div>
+
+          <!-- 2018 -->
+          <div class="item-row" style="margin-top: 10px;"><strong>2018</strong></div>
+          <div class="item-row">
+            [7] Q. Zhang, B. Zhang, <strong>Y. Yu</strong>, K. Zhao, P. He, B. Huang. Fluoroalkyl-Silane-Modified 3D Graphene Foam with Improved Joule-heating Effects and High Hydrophobicity-Derived Anti-icing Properties. <em>Journal of Materials Science</em>, 2018, 53, 528-537.
+          </div>
+
+          <!-- 2017 -->
+          <div class="item-row" style="margin-top: 10px;"><strong>2017</strong></div>
+          <div class="item-row">
+            [6] X. Zhao, Q. Di, X. Wu, Y. Liu, <strong>Y. Yu</strong>, G. Wei, J. Zhang, Z. Quan. Mild Synthesis of Monodisperse Tin Nanocrystals and Tin Chalcogenide Hollow Nnaostructures. <em>Chemical Communications</em>, 2017, 53, 11001-11004. (Back Cover)
+          </div>
+          <div class="item-row">
+            [5] Q. Zhang, <strong>Y. Yu</strong>, K. Yang, B. Zhang, K. Zhao, G. Xiong, X. Zhang. Mechanically Robust and Electrically Conductive Graphene-Paper/Glass-Fibers/Epoxy Composites for Stimuli-Responsive Sensors and Joule Heating Deicers. <em>Carbon</em>, 2017, 124, 296-307.
+          </div>
+
+          <!-- 2016 -->
+          <div class="item-row" style="margin-top: 10px;"><strong>2016</strong></div>
+          <div class="item-row">
+            [4] X. Xu#, Q. Zhang#, <strong>Y. Yu#</strong>, W. Chen, H. Hu, H. Li. Naturally Dried Graphene Aerogels with Superelasticity and Tunable Poisson's Ratio. <em>Advanced Materials</em>, 2016, 28, 9223-9230. (# Co-first authors, Citation > 200)
+          </div>
+          <div class="item-row">
+            [3] Q. Zhang, <strong>Y. Yu</strong>, W. Chen, T. Chen, Y. Zhou, H. Li. Outdoor experiment of flexible sandwiched graphite-PET sheets based self-snow-thawing pavement. <em>Cold Regions Science and Technology</em>, 2016, 122, 10-17.
+          </div>
+          <div class="item-row">
+            [2] Q. Zhang, X. Xu, D. Lin, W. Chen, G. Xiong, <strong>Y. Yu</strong>, T. S. Fisher, H. Li, Hyperbolically Patterned 3D Graphene Metamaterial with Negative Poisson's Ratio. <em>Advanced Materials</em>, 2016, 28, 2229-2237. (Citation > 200)
+          </div>
+
+          <!-- 2015 -->
+          <div class="item-row" style="margin-top: 10px;"><strong>2015</strong></div>
+          <div class="item-row">
+            [1] X. Xu, Q. Zhang, <strong>Y. Yu</strong>, K. Yang, Q. He, W. Chen, H. Li, Y. Qiao. Fluidic behaviours in a 2D folded-graphene aerogel monolith. <em>Journal of Physics D: Applied Physics</em>, 2015, 48, 425301.
           </div>
         </div>
       </section>
