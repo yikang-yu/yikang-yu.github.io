@@ -60,18 +60,17 @@
       letter-spacing: -0.5px;
       color: var(--text-main);
       display: inline-block;
-      border-bottom: 1.5px solid var(--line-color);
       padding-bottom: 4px;
     }
 
-    /* 顶部导航栏 */
+   /* 顶部导航栏 */
     nav {
       display: flex;
       gap: 32px;
     }
 
     nav a {
-      text-decoration: none;
+      text-decoration: none; /* 平时没有下划线 */
       color: var(--text-muted);
       font-size: 0.95rem;
       text-transform: uppercase;
@@ -80,10 +79,17 @@
       transition: color 0.2s ease;
     }
 
-    nav a:hover, nav a.active {
+    /* 鼠标悬停时显示下划线 */
+    nav a:hover {
       color: var(--link-hover);
       text-decoration: underline;
       text-underline-offset: 4px;
+    }
+
+    /* 当前选中的页面（如果你希望当前页面保持无下划线或有下划线，可以自由调整，这里设置为有下划线或无下划线均可） */
+    nav a.active {
+      color: var(--link-hover);
+      text-decoration: none; /* 如果当前页面不需要下划线设为 none，如果需要可以改为 underline */
     }
 
     /* ABOUT / 个人简介 */
