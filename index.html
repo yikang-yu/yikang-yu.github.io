@@ -237,6 +237,25 @@
       color: var(--text-main);
     }
 
+    /* ACKNOWLEDGEMENTS 图片排版样式 */
+    .ack-image-container {
+      width: 100%;
+      text-align: center;
+      margin-top: 16px;
+    }
+
+    .ack-image {
+      max-width: 100%;
+      height: auto;
+      border-radius: 4px;
+      opacity: 0.92;
+      transition: opacity 0.2s ease;
+    }
+
+    .ack-image:hover {
+      opacity: 1;
+    }
+
     /* 响应式适配 (手机端) */
     @media (max-width: 640px) {
       body {
@@ -347,7 +366,7 @@
         <h3 class="section-title">PROFESSIONAL ACTIVITIES</h3>
         <div class="item-list">
           <div class="item-row">
-            <span class="item-bold">Invited Peer Review Referee:</span> Reviewer for <em>ACS Applied Materials & Interfaces</em>, <em>Applied Surface Science</em>,<em>Measurement Science and Technology, <em>Engineering Research Express</em>, </em> <em>Nano Futures</em>, <em>ASME Journal of Biomechanical Engineering</em>, <em>Composite Communications</em>, <em>Nanotechnology</em>, <em>Journal of Physics: Energy</em>, <em>Frontiers in Chemistry</em>, and <em>RSC Advances</em>.
+            <span class="item-bold">Invited Peer Review Referee:</span> Reviewer for <em>ACS Applied Materials & Interfaces</em>, <em>Applied Surface Science</em>, <em>Measurement Science and Technology</em>, <em>Engineering Research Express</em>, <em>Nano Futures</em>, <em>ASME Journal of Biomechanical Engineering</em>, <em>Composite Communications</em>, <em>Nanotechnology</em>, <em>Journal of Physics: Energy</em>, <em>Frontiers in Chemistry</em>, and <em>RSC Advances</em>.
           </div>
           <div class="item-row">
             <span class="item-bold">Invited Editorial Board Member:</span> Review Editor for Electrochemistry Section, <em>Frontiers in Chemistry</em>.
@@ -595,6 +614,14 @@
           <div class="item-row">
             [1] X. Xu, Q. Zhang, <strong>Y. Yu</strong>, K. Yang, Q. He, W. Chen, H. Li, Y. Qiao. Fluidic behaviours in a 2D folded-graphene aerogel monolith. <em>Journal of Physics D: Applied Physics</em>, 2015, 48, 425301.
           </div>
+        </div>
+      </section>
+
+      <!-- ACKNOWLEDGEMENTS SECTION -->
+      <section id="acknowledgements" class="section-block">
+        <h3 class="section-title">ACKNOWLEDGEMENTS</h3>
+        <div class="ack-image-container">
+          <img src="11111.png" alt="Funding Acknowledgements" class="ack-image">
         </div>
       </section>
 
